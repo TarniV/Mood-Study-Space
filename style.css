@@ -1,0 +1,188 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+     font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:0.5s;
+    background:#0d1b2a;
+    color:#e0e1dd;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+h1{
+    margin-bottom:30px;
+    font-size:40px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+    background: #415a77;
+    color:#e0e1dd;
+}
+
+button:hover{
+    transform:scale(1.05);
+    background: #778da9;
+    color:#1b263b;
+}
+
+.card{
+    margin-top:40px;
+    padding:60px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.1);
+    width:500px;
+    backdrop-filter: blur(10px);
+    text-align:center;
+}
+
+#title{
+    margin-bottom:15px;
+}
+
+.bubbles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.bubbles span{
+    position:absolute;
+    bottom:-100px;
+    width:40px;
+    height:40px;
+    background:rgba(255,255,255,0.1);
+    border-radius:50%;
+    animation: float 10s linear infinite;
+    backdrop-filter: blur(5px);
+}
+
+.bubbles span:nth-child(1){
+    left:10%;
+    width:60px;
+    height:60px;
+    animation-duration:8s;
+}
+
+.bubbles span:nth-child(2){
+    left:20%;
+    animation-duration:12s;
+}
+
+.bubbles span:nth-child(3){
+    left:35%;
+    width:80px;
+    height:80px;
+    animation-duration:15s;
+}
+
+.bubbles span:nth-child(4){
+    left:50%;
+    animation-duration:10s;
+}
+
+.bubbles span:nth-child(5){
+    left:65%;
+    width:50px;
+    height:50px;
+    animation-duration:14s;
+}
+
+.bubbles span:nth-child(6){
+    left:75%;
+    animation-duration:9s;
+}
+
+.bubbles span:nth-child(7){
+    left:85%;
+    width:70px;
+    height:70px;
+    animation-duration:13s;
+}
+
+.bubbles span:nth-child(8){
+    left:95%;
+    animation-duration:11s;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+@media (max-width: 600px){
+
+    body{
+        padding:20px;
+    }
+
+    h1{
+        font-size:28px;
+        text-align:center;
+    }
+
+    .container{
+        width:100%;
+    }
+
+    .card{
+        width:100%;
+        padding:20px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    button{
+        width:100%;
+        max-width:250px;
+    }
+
+}
